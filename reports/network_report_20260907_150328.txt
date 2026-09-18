@@ -1,0 +1,152 @@
+========================================================================
+  路由与测速
+========================================================================
+生成时间：2026-09-07 15:03:28
+主机名：zzzsssccc
+操作系统：Windows-11-10.0.26200-SP0
+Python：3.14.3
+
+------------------------------------------------------------------------
+[1] 无线/热点与 VPN 环境  状态：正常
+摘要：当前主网卡：WLAN；已连接无线网络：SCNUNET，信号约 90%；未检测到明显的 VPN 或代理设置
+修复建议：
+  1. 当前网络环境未发现明显异常，可继续运行连通性检测确认上网质量。
+详细数据：
+{'wireless': {'supported': True,
+              'connected': True,
+              'interface': 'WLAN',
+              'ssid': 'SCNUNET',
+              'signal_percent': 90,
+              'signal_text': '90%',
+              'radio_type': '802.11ac',
+              'channel': '157',
+              'auth': '开放式',
+              'receive_rate_mbps': '173.3',
+              'transmit_rate_mbps': '173.3',
+              'state': '已连接',
+              'summary': '已连接无线网络：SCNUNET，信号约 90%'},
+ 'vpn_proxy': {'detected': False,
+               'adapter_hits': [],
+               'system_proxy_enabled': False,
+               'system_proxy_server': '127.0.0.1:7897',
+               'proxy_note': '',
+               'env_proxies': [],
+               'summary': '未检测到明显的 VPN 或代理设置'},
+ 'connection': {'kind': 'wifi',
+                'adapter_name': 'WLAN',
+                'ipv4': '10.253.57.56',
+                'gateway': 'fe80::274:9cff:fe80:dc7d%4',
+                'summary': '当前主网卡：WLAN'}}
+
+------------------------------------------------------------------------
+[2] 路由追踪  状态：警告
+摘要：已到达目标，但出现异常跳点：第 2 跳（部分丢包）、第 5 跳（部分丢包）、第 6 跳（丢包）、第 7 跳（丢包）、第 8 跳（部分丢包）、第 10 跳（丢包）、第 11 跳（丢包）、第 12 跳（丢包）。
+修复建议：
+  1. 异常从第 2 跳开始，说明问题位于该段链路或该跳路由器附近。
+  2. 第 1 跳异常通常与光猫/路由器连接有关，可重启光猫与路由器。
+  3. 公网中段出现丢包或高延迟多为运营商线路或骨干网波动，建议联系宽带运营商。
+  4. 若公司/校园网内跳点异常，请联系本单位网络管理员。
+详细数据：
+{'destination': 'www.baidu.com',
+ 'destination_ip': '183.2.172.177',
+ 'command': ['tracert', '-d', '-h', '15', '-w', '2000', 'www.baidu.com'],
+ 'hops': [{'hop': 1,
+           'ip': '10.253.48.1',
+           'latencies_ms': [3.0, 2.0, 1.0],
+           'avg_latency_ms': 2.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 2,
+           'ip': '10.10.0.41',
+           'latencies_ms': [8.0, 5.0],
+           'avg_latency_ms': 6.5,
+           'loss_count': 1,
+           'status': '部分丢包'},
+          {'hop': 3,
+           'ip': '10.10.0.253',
+           'latencies_ms': [17.0, 7.0, 6.0],
+           'avg_latency_ms': 10.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 4,
+           'ip': '121.33.239.1',
+           'latencies_ms': [7.0, 8.0, 4.0],
+           'avg_latency_ms': 6.33,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 5,
+           'ip': '218.19.193.113',
+           'latencies_ms': [28.0],
+           'avg_latency_ms': 28.0,
+           'loss_count': 2,
+           'status': '部分丢包'},
+          {'hop': 6,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 7,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 8,
+           'ip': '219.135.96.194',
+           'latencies_ms': [14.0, 10.0],
+           'avg_latency_ms': 12.0,
+           'loss_count': 1,
+           'status': '部分丢包'},
+          {'hop': 9,
+           'ip': '14.29.117.178',
+           'latencies_ms': [8.0, 6.0, 7.0],
+           'avg_latency_ms': 7.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 10,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 11,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 12,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 13,
+           'ip': '183.2.172.177',
+           'latencies_ms': [10.0, 7.0, 8.0],
+           'avg_latency_ms': 8.33,
+           'loss_count': 0,
+           'status': '到达目标'}],
+ 'status': '警告',
+ 'summary': '已到达目标，但出现异常跳点：第 2 跳（部分丢包）、第 5 跳（部分丢包）、第 6 跳（丢包）、第 7 跳（丢包）、第 8 跳（部分丢包）、第 10 跳（丢包）、第 11 '
+            '跳（丢包）、第 12 跳（丢包）。',
+ 'completed': True,
+ 'error': ''}
+
+------------------------------------------------------------------------
+[3] 下载网速测试  状态：警告
+摘要：下载 1.00 MiB 用了 78.79 秒，平均速度 0.11 Mbps。
+修复建议：
+  1. 网络连通，但下载速度偏低。可先重启路由器，再用有线网线直连光猫/路由重测；若仍慢，请联系宽带运营商确认带宽和线路质量。
+详细数据：
+{'url': 'https://speed.cloudflare.com/__down?bytes=1048576',
+ 'downloaded_mib': 1.0,
+ 'elapsed_seconds': 78.79,
+ 'average_mbps': 0.11}
+
+========================================================================
+总体修复建议：
+  1. 如果检测结果仍不理想，可运行“完整诊断”查看更多网络细节。
+========================================================================
+检测完成，本次使用的单次超时时间为 2.0 秒。

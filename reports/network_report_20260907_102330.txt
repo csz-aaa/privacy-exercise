@@ -1,0 +1,64 @@
+========================================================================
+  测试报告
+========================================================================
+生成时间：2026-09-07 10:23:30
+主机名：zzzsssccc
+操作系统：Windows-11-10.0.26200-SP0
+Python：3.14.3
+
+------------------------------------------------------------------------
+[1] 基础网络信息  状态：正常
+摘要：主网卡“以太网”已连接，本机 IP 10.252.133.206，网关 10.252.128.1。
+修复建议：
+  1. 基础网络配置正常，无需处理。
+详细数据：
+{'platform': 'windows',
+ 'hostname': 'zzzsssccc',
+ 'adapters': [{'name': 'WLAN 3',
+               'mac_address': '86-9E-56-BD-DA-FD',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []},
+              {'name': 'WLAN 4',
+               'mac_address': '86-9E-56-BD-CA-ED',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []},
+              {'name': '以太网',
+               'mac_address': 'B4-E9-B8-93-6F-12',
+               'status': '已连接',
+               'ipv4_addresses': ['10.252.133.206'],
+               'subnet_mask': '255.255.240.0',
+               'default_gateway': '10.252.128.1',
+               'dns_servers': ['222.200.129.134']},
+              {'name': 'WLAN',
+               'mac_address': '84-9E-56-BD-EA-CD',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []}],
+ 'primary': {'name': '以太网',
+             'mac_address': 'B4-E9-B8-93-6F-12',
+             'status': '已连接',
+             'ipv4_addresses': ['10.252.133.206'],
+             'subnet_mask': '255.255.240.0',
+             'default_gateway': '10.252.128.1',
+             'dns_servers': ['222.200.129.134']},
+ 'summary': {'hostname': 'zzzsssccc',
+             'adapter_name': '以太网',
+             'adapter_status': '已连接',
+             'mac_address': 'B4-E9-B8-93-6F-12',
+             'ipv4': '10.252.133.206',
+             'subnet_mask': '255.255.240.0',
+             'default_gateway': '10.252.128.1',
+             'dns_servers': ['222.200.129.134'],
+             'platform': 'windows'}}
+
+========================================================================
+========================================================================
+检测完成，本次使用的单次超时时间为 2.0 秒。

@@ -1,0 +1,316 @@
+========================================================================
+  完整诊断
+========================================================================
+生成时间：2026-09-07 14:57:12
+主机名：zzzsssccc
+操作系统：Windows-11-10.0.26200-SP0
+Python：3.14.3
+
+------------------------------------------------------------------------
+[1] 无线/热点与 VPN 环境  状态：正常
+摘要：当前主网卡：WLAN；已连接无线网络：SCNUNET，信号约 90%；未检测到明显的 VPN 或代理设置
+修复建议：
+  1. 当前网络环境未发现明显异常，可继续运行连通性检测确认上网质量。
+详细数据：
+{'wireless': {'supported': True,
+              'connected': True,
+              'interface': 'WLAN',
+              'ssid': 'SCNUNET',
+              'signal_percent': 90,
+              'signal_text': '90%',
+              'radio_type': '802.11ac',
+              'channel': '157',
+              'auth': '开放式',
+              'receive_rate_mbps': '173.3',
+              'transmit_rate_mbps': '173.3',
+              'state': '已连接',
+              'summary': '已连接无线网络：SCNUNET，信号约 90%'},
+ 'vpn_proxy': {'detected': False,
+               'adapter_hits': [],
+               'system_proxy_enabled': False,
+               'system_proxy_server': '127.0.0.1:7897',
+               'proxy_note': '',
+               'env_proxies': [],
+               'summary': '未检测到明显的 VPN 或代理设置'},
+ 'connection': {'kind': 'wifi',
+                'adapter_name': 'WLAN',
+                'ipv4': '10.253.57.56',
+                'gateway': 'fe80::274:9cff:fe80:dc7d%4',
+                'summary': '当前主网卡：WLAN'}}
+
+------------------------------------------------------------------------
+[2] 基础网络信息  状态：正常
+摘要：主网卡“WLAN”已连接，本机 IP 10.253.57.56，网关 fe80::274:9cff:fe80:dc7d%4。
+修复建议：
+  1. 基础网络配置正常，无需处理。
+详细数据：
+{'platform': 'windows',
+ 'hostname': 'zzzsssccc',
+ 'adapters': [{'name': 'WLAN 3',
+               'mac_address': '86-9E-56-BD-DA-FD',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []},
+              {'name': 'WLAN 4',
+               'mac_address': '86-9E-56-BD-CA-ED',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []},
+              {'name': '以太网',
+               'mac_address': 'B4-E9-B8-93-6F-12',
+               'status': '已断开',
+               'ipv4_addresses': [],
+               'subnet_mask': '',
+               'default_gateway': '',
+               'dns_servers': []},
+              {'name': 'WLAN',
+               'mac_address': '84-9E-56-BD-EA-CD',
+               'status': '已连接',
+               'ipv4_addresses': ['10.253.57.56'],
+               'subnet_mask': '255.255.240.0',
+               'default_gateway': 'fe80::274:9cff:fe80:dc7d%4',
+               'dns_servers': ['223.5.5.5']}],
+ 'primary': {'name': 'WLAN',
+             'mac_address': '84-9E-56-BD-EA-CD',
+             'status': '已连接',
+             'ipv4_addresses': ['10.253.57.56'],
+             'subnet_mask': '255.255.240.0',
+             'default_gateway': 'fe80::274:9cff:fe80:dc7d%4',
+             'dns_servers': ['223.5.5.5']},
+ 'summary': {'hostname': 'zzzsssccc',
+             'adapter_name': 'WLAN',
+             'adapter_status': '已连接',
+             'mac_address': '84-9E-56-BD-EA-CD',
+             'ipv4': '10.253.57.56',
+             'subnet_mask': '255.255.240.0',
+             'default_gateway': 'fe80::274:9cff:fe80:dc7d%4',
+             'dns_servers': ['223.5.5.5'],
+             'platform': 'windows'}}
+
+------------------------------------------------------------------------
+[3] 连通性检测：网关  状态：异常
+摘要：ping fe80::274:9cff:fe80:dc7d%4（网关）：成功 0/4 次，丢包率 100%，平均延迟 无法统计。
+修复建议：
+  1. 检查网线是否松动、水晶头是否插好；使用 WiFi 时确认是否连到了自家路由器。
+  2. 观察路由器电源灯、LAN/WAN 灯是否正常；先重启路由器，等待 2 分钟。
+  3. 如果系统显示“未识别的网络”，可执行 ipconfig /release 和 ipconfig /renew。
+  4. 以上操作无效时，打开“网络连接”右键网卡“禁用”再“启用”，或重装网卡驱动。
+详细数据：
+{'target': 'fe80::274:9cff:fe80:dc7d%4',
+ 'target_type': '网关',
+ 'count': 4,
+ 'success_count': 0,
+ 'loss_rate': 100.0,
+ 'avg_latency_ms': None,
+ 'min_latency_ms': None,
+ 'max_latency_ms': None,
+ 'reachable': False,
+ 'status': '异常',
+ 'errors': ['ping 未收到回复', 'ping 未收到回复', 'ping 未收到回复']}
+
+------------------------------------------------------------------------
+[4] 连通性检测：公网 IP  状态：警告
+摘要：ping 8.8.8.8（公网IP）：成功 2/4 次，丢包率 50%，平均延迟 179.0 ms。
+修复建议：
+  1. 对 公网IP 的 ping 存在丢包或高延迟，线路质量可能不稳定。
+  2. 先重启路由器，再用有线方式测试；若仍异常，联系宽带运营商检查线路。
+详细数据：
+{'target': '8.8.8.8',
+ 'target_type': '公网IP',
+ 'count': 4,
+ 'success_count': 2,
+ 'loss_rate': 50.0,
+ 'avg_latency_ms': 179.0,
+ 'min_latency_ms': 178.0,
+ 'max_latency_ms': 180.0,
+ 'reachable': False,
+ 'status': '警告',
+ 'errors': ['ping 未收到回复', 'ping 未收到回复']}
+
+------------------------------------------------------------------------
+[5] 连通性检测：域名  状态：正常
+摘要：ping www.baidu.com（域名）：成功 4/4 次，丢包率 0%，平均延迟 10.5 ms。
+修复建议：
+  1. 域名连接正常。
+详细数据：
+{'target': 'www.baidu.com',
+ 'target_type': '域名',
+ 'count': 4,
+ 'success_count': 4,
+ 'loss_rate': 0.0,
+ 'avg_latency_ms': 10.5,
+ 'min_latency_ms': 6.0,
+ 'max_latency_ms': 17.0,
+ 'reachable': True,
+ 'status': '正常',
+ 'errors': []}
+
+------------------------------------------------------------------------
+[6] DNS 诊断（www.baidu.com）  状态：正常
+摘要：www.baidu.com 可正常解析，系统 DNS 与公共 DNS 结果一致或存在交集。
+修复建议：
+  1. 当前 DNS 配置基本正常，无需处理。
+  2. 若只是偶尔打不开网页，可先刷新 DNS 缓存并重启浏览器。
+详细数据：
+{'domain': 'www.baidu.com',
+ 'system': {'ok': True, 'ips': ['183.2.172.177'], 'error': ''},
+ 'public_dns': [{'server': '114.114.114.114',
+                 'ok': True,
+                 'ips': ['183.2.172.177'],
+                 'elapsed_ms': 34.41,
+                 'error': ''},
+                {'server': '8.8.8.8',
+                 'ok': True,
+                 'ips': ['103.235.46.102', '103.235.46.115'],
+                 'elapsed_ms': 196.86,
+                 'error': ''}],
+ 'expected_ips': ['183.2.172.177', '103.235.46.102', '103.235.46.115'],
+ 'status': '正常',
+ 'pollution_suspected': False,
+ 'summary': 'www.baidu.com 可正常解析，系统 DNS 与公共 DNS 结果一致或存在交集。',
+ 'suggestions': ['当前 DNS 配置基本正常，无需处理。', '若只是偶尔打不开网页，可先刷新 DNS 缓存并重启浏览器。']}
+
+------------------------------------------------------------------------
+[7] 端口与服务检测  状态：正常
+摘要：端口检测完成：3/3 个端口可以连接。
+修复建议：
+  1. 常用端口检测全部通过，HTTP、HTTPS 和 DNS 端口可以正常连接。
+详细数据：
+{'status': '正常',
+ 'results': [{'service': 'HTTP',
+              'host': 'www.baidu.com',
+              'port': 80,
+              'open': True,
+              'elapsed_ms': 40.79,
+              'reason': ''},
+             {'service': 'HTTPS',
+              'host': 'www.baidu.com',
+              'port': 443,
+              'open': True,
+              'elapsed_ms': 47.46,
+              'reason': ''},
+             {'service': 'DNS',
+              'host': '114.114.114.114',
+              'port': 53,
+              'open': True,
+              'elapsed_ms': 109.84,
+              'reason': ''}],
+ 'summary': '端口检测完成：3/3 个端口可以连接。'}
+
+------------------------------------------------------------------------
+[8] 路由追踪  状态：警告
+摘要：已到达目标，但出现异常跳点：第 2 跳（丢包）、第 5 跳（丢包）、第 7 跳（丢包）、第 8 跳（丢包）、第 10 跳（丢包）、第 11 跳（丢包）、第 12 跳（丢包）。
+修复建议：
+  1. 异常从第 2 跳开始，说明问题位于该段链路或该跳路由器附近。
+  2. 第 1 跳异常通常与光猫/路由器连接有关，可重启光猫与路由器。
+  3. 公网中段出现丢包或高延迟多为运营商线路或骨干网波动，建议联系宽带运营商。
+  4. 若公司/校园网内跳点异常，请联系本单位网络管理员。
+详细数据：
+{'destination': 'www.baidu.com',
+ 'destination_ip': '183.2.172.177',
+ 'command': ['tracert', '-d', '-h', '15', '-w', '2000', 'www.baidu.com'],
+ 'hops': [{'hop': 1,
+           'ip': '10.253.48.1',
+           'latencies_ms': [11.0, 10.0, 21.0],
+           'avg_latency_ms': 14.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 2,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 3,
+           'ip': '10.10.0.253',
+           'latencies_ms': [10.0, 5.0, 6.0],
+           'avg_latency_ms': 7.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 4,
+           'ip': '121.33.239.1',
+           'latencies_ms': [74.0, 8.0, 5.0],
+           'avg_latency_ms': 29.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 5,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 6,
+           'ip': '116.23.46.33',
+           'latencies_ms': [7.0, 9.0, 12.0],
+           'avg_latency_ms': 9.33,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 7,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 8,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 9,
+           'ip': '14.29.117.178',
+           'latencies_ms': [10.0, 32.0, 9.0],
+           'avg_latency_ms': 17.0,
+           'loss_count': 0,
+           'status': '正常'},
+          {'hop': 10,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 11,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 12,
+           'ip': '',
+           'latencies_ms': [],
+           'avg_latency_ms': None,
+           'loss_count': 3,
+           'status': '丢包'},
+          {'hop': 13,
+           'ip': '183.2.172.177',
+           'latencies_ms': [11.0, 9.0, 8.0],
+           'avg_latency_ms': 9.33,
+           'loss_count': 0,
+           'status': '到达目标'}],
+ 'status': '警告',
+ 'summary': '已到达目标，但出现异常跳点：第 2 跳（丢包）、第 5 跳（丢包）、第 7 跳（丢包）、第 8 跳（丢包）、第 10 跳（丢包）、第 11 跳（丢包）、第 12 '
+            '跳（丢包）。',
+ 'completed': True,
+ 'error': ''}
+
+========================================================================
+综合判断：
+  网关 ping 不通，初步判断为内网连接问题（网线/WiFi/路由器）。；路由路径中存在丢包或高延迟跳点，线路质量可能已变差。
+总体修复建议：
+  1. 检查网线是否松动、水晶头是否插好；使用 WiFi 时确认是否连到了自家路由器。
+  2. 观察路由器电源灯、LAN/WAN 灯是否正常；先重启路由器，等待 2 分钟。
+  3. 如果系统显示“未识别的网络”，可执行 ipconfig /release 和 ipconfig /renew。
+  4. 以上操作无效时，打开“网络连接”右键网卡“禁用”再“启用”，或重装网卡驱动。
+  5. 异常从第 2 跳开始，说明问题位于该段链路或该跳路由器附近。
+  6. 第 1 跳异常通常与光猫/路由器连接有关，可重启光猫与路由器。
+  7. 公网中段出现丢包或高延迟多为运营商线路或骨干网波动，建议联系宽带运营商。
+  8. 若公司/校园网内跳点异常，请联系本单位网络管理员。
+  9. 学校 WiFi 通常需要网页认证：连接后先打开任意网页完成登录，再回来重新检测。
+  10. 晚间或上课高峰期学校网络可能拥塞，可稍后再测或换一个无线接入点。
+  11. 如果信号弱，尽量靠近教室或走廊里的无线接入点，避免隔墙使用。
+========================================================================
+检测完成，本次使用的单次超时时间为 2.0 秒。

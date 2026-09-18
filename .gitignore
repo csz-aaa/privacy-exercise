@@ -1,0 +1,8 @@
+reports/*.txt
+reports/*.log
+gui_error.log
+__pycache__/
+*.py[cod]
+.env
+*.key
+*.pem
